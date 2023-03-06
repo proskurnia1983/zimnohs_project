@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button class="toggle-menu">
+        <span> MENU </span>
+        <i class="icon-cross"></i>
+      </button>
+      <ul class="menu">
+        <li class="menu-item"><a href="home.html"> Home</a></li>
+        <li class="menu-item"><a href=" aboutme.html">About me</a></li>
+        <li class="menu-item"><a href="blog.html">Blog</a></li>
+        <li class="menu-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="inner-content">
+        <h1 class="text-center">About me</h1>
+        <div class="photos">
+          <div class="photo-holder">
+            <img src="assets/images/20976.JPEG" alt="text" />
+          </div>
+          <div class="photo-holder">
+            <img src="assets/images/20459.JPEG" alt="text" />
+          </div>
+          <div class="photo-holder">
+            <img src="assets/images/20952.JPEG" alt="text" />
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+          cupiditate, nobis culpa esse voluptatibus deserunt amet laboriosam
+          quaerat id officiis rem repellat error. Explicabo repudiandae maiores
+          exercitationem animi quibusdam quis. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Minima voluptatibus fugit saepe facilis,
+          est, id nulla sint veritatis eius ducimus alias blanditiis omnis
+          incidunt eaque iure? Sint omnis unde sequi. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Cum laudantium ipsum est optio nesciunt
+          dolores officiis quo exercitationem nobis eos! Asperiores, atque sit
+          odit eveniet accusantium modi dignissimos soluta minus! Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Alias voluptatibus eum
+          ducimus, corrupti sed tempora ipsum voluptates deleniti et quisquam
+          eius. Ex vel maiores dolores optio nulla aliquid ea iure? Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Assumenda, neque
+          distinctio veritatis eveniet deserunt error, vitae, dicta corrupti
+          molestiae eius blanditiis asperiores ipsa id iure qui quo tempore?
+          Autem, dolor?
+        </p>
+        <h2>Skills</h2>
+        <ul>
+          <li>Lorem</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+        <h2>Projects</h2>
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+      <p class="bottom-text">
+        To eat is a necessity, but to eat intelligently is an art.
+      </p>
+    </main>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(".toggle-menu").click(function () {
+      $(this).toggleClass("open");
+      $(".menu").toggleClass("open");
+    });
+  </script>
+</html>

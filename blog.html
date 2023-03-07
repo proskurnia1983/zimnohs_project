@@ -21,15 +21,14 @@
     </header>
 
     <main class="content">
-      <div class="profile">
+      <div class="profile blog">
         <div class="photo-holder radius">
           <img src="assets/images/IMG-8439.jpg" alt="Cook" />
         </div>
-        <span class="photo-name">Ruslans Zimnohs</span>
-        <span>Cooking is my life</span>
-      </div>
-
-      <div class="social-links column">
+        <span class="photo-name blog-name">Ruslans Zimnohs</span>
+        <span class="blog-name">Cooking is my life</span>
+</div>
+      <div class="social-links column blog-links">
         <a href="https://www.linkedin.com/" target="_blank">
           <span class="icon-linkedin2" aria-hidden="true"></span>
           <span class="screen-reader-text">Follow on LinkedIn</span>
@@ -43,7 +42,46 @@
           <span class="screen-reader-text">Follow on Facebook</span>
         </a>
       </div>
-      <hr />
+      <div class="text-blog">
+<p>
+      <h2 class="blog-text"><a href="#">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
+        ullam
+    </a>
+      </h2>
+    </p>
+  
+    <p>
+        <h2 class="blog-text"><a href="#">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
+          ullam
+        </a>
+        </h2>
+    </p>
+    
+    <p>
+        <h2 class="blog-text"><a href="#">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
+          ullam
+        </a>
+        </h2>
+    </p>
+
+</div>
+<hr>
+          <p class="bottom-text">To eat is a necessity, but to eat intelligently is an art.</p>
+      
     </main>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(".toggle-menu").click(function () {
+      $(this).toggleClass("open");
+      $(".menu").toggleClass("open");
+    });
+  </script>
 </html>

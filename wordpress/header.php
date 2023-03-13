@@ -18,16 +18,17 @@
         <i class="icon-cross"></i>
 
         </button>
-        <ul class="menu">
-          <li class="menu-item"><a href="home.html"> Home</a>
-          </li>
-          <li class="menu-item"><a href=" aboutme.html">About me</a>
-          </li>
-          <li class="menu-item"><a href="blog.html">Blog</a>
-          </li>
-          <li class="menu-item"><a href="contact.html">Contact</a>
-          </li>
-         
-        </ul>
+
+<?php 
+wp_nav_menu(
+  array(
+    'menu' => 'primary',
+    'container' => '',
+    'theme_location' => 'primary',
+    'items_wrap' => '<ul class="menu">%3$s</ul>',
+  )
+  );
+
+?>
         
-      </header>
+  </header>

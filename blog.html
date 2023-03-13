@@ -25,52 +25,54 @@
         <div class="photo-holder radius">
           <img src="assets/images/IMG-8439.jpg" alt="Cook" />
         </div>
-        <span class="photo-name blog-name">Ruslans Zimnohs</span>
+        <span class="photo-name">Ruslans Zimnohs</span>
         <span class="blog-name">Cooking is my life</span>
-</div>
-      <div class="social-links column blog-links">
-        <a href="https://www.linkedin.com/" target="_blank">
-          <span class="icon-linkedin2" aria-hidden="true"></span>
-          <span class="screen-reader-text">Follow on LinkedIn</span>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <span class="icon-instagram" aria-hidden="true"></span>
-          <span class="screen-reader-text">Follow on Instagram</span>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank">
-          <span class="icon-facebook2" aria-hidden="true"></span>
-          <span class="screen-reader-text">Follow on Facebook</span>
-        </a>
       </div>
-      <div class="text-blog">
-<p>
-      <h2 class="blog-text"><a href="#">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
-        ullam
-    </a>
-      </h2>
-    </p>
-  
-    <p>
-        <h2 class="blog-text"><a href="#">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
-          ullam
-        </a>
-        </h2>
-    </p>
-    
-    <p>
-        <h2 class="blog-text"><a href="#">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero
-          ullam
-        </a>
-        </h2>
-    </p>
+      <div class="post-footer-links">
+        <span>Share on:</span>
+        <div class="social-links column blog-links">
+          <a href="https://www.linkedin.com/" target="_blank">
+            <span class="icon-linkedin2" aria-hidden="true"></span>
+            <span class="screen-reader-text">Follow on LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <span class="icon-instagram" aria-hidden="true"></span>
+            <span class="screen-reader-text">Follow on Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <span class="icon-facebook2" aria-hidden="true"></span>
+            <span class="screen-reader-text">Follow on Facebook</span>
+          </a>
+        </div>
+      </div>
+      <div class="posts-list">
+        <div class="post-info">
+          <a href="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            vero ullam
+          </a>
+          <span class="publish-date">December 23, 2020</span>
+        </div>
+        <div class="post-info">
+          <a href="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            vero ullam
+          </a>
+          <span class="publish-date">December 23, 2020</span>
+        </div>
 
-</div>
-<hr>
-          <p class="bottom-text">To eat is a necessity, but to eat intelligently is an art.</p>
-      
+        <div class="post-info">
+          <a href="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            vero ullam
+          </a>
+          <span class="publish-date">December 23, 2020</span>
+        </div>
+      </div>
+      <hr />
+      <p class="bottom-text">
+        To eat is a necessity, but to eat intelligently is an art.
+      </p>
     </main>
   </body>
   <script
@@ -78,10 +80,39 @@
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
     crossorigin="anonymous"
   ></script>
+
   <script>
-    $(".toggle-menu").click(function () {
-      $(this).toggleClass("open");
-      $(".menu").toggleClass("open");
+    document.addEventListener("DOMContentLoaded", function () {
+      new Splide("#card-carousel", {
+        perPage: 2,
+        breakpoints: {
+          640: {
+            perPage: 1,
+          },
+        },
+      }).mount();
+    });
+  </script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/splide.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let splide = new Splide(".splide.projects", {
+        perPage: 1,
+        pagination: false,
+        mediaQuery: "min",
+        breakpoints: {
+          768: {
+            perPage: 2,
+            gap: 15,
+          },
+          1200: {
+            perPage: 3,
+            gap: 30,
+          },
+        },
+      });
+      splide.mount();
     });
   </script>
 </html>

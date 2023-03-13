@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/splide.min.css">
   </head>
   <body>
     <header>
@@ -21,7 +22,22 @@
     </header>
     <main>
       <h2>Lorem</h2>
-      <img src="" alt="" />
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide">
+                      <img src="assets/images/20443.JPEG" alt="text">
+                  </li>
+                  <li class="splide__slide">
+                      <img src="assets/images/20459.JPEG" alt="text">
+                  </li>
+                  <li class="splide__slide">
+                      <img src="assets/images/20697.JPEG" alt="text">
+                  </li>
+              </ul>
+        </div>
+      </section>
+
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Sunt tenetur explicabo
@@ -51,7 +67,7 @@
         Veritatis magnam ab in et repellat, ipsa id blanditiis. 
         Perferendis, voluptas provident reiciendis quae architecto illo magnam nam voluptate 
         cumque non? Laborum.</p>
-        
+
       <div class="social-links column">
             
         <a href="https://www.linkedin.com/" target="_blank">
@@ -68,5 +84,28 @@
         </a>
         
     </main>
+    <script src="assets/js/splide.min.js"></script>
+   
+    
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+        let splide = new Splide( '.splide', {
+            perPage: 1,
+            pagination: false,
+            mediaQuery: 'min',
+            breakpoints: {
+                768: {
+                    perPage: 1,
+                    gap: 15
+                },
+                1200: {
+                    perPage: 1,
+                    gap: 30
+                }
+            }
+        } );
+        splide.mount();
+    } );
+    </script>
   </body>
 </html>

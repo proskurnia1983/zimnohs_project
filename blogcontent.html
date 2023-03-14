@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="assets/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/splide.min.css" />
   </head>
   <body>
     <header>
@@ -24,17 +24,20 @@
       <h2>Lorem</h2>
       <section id="image-carousel" class="splide" aria-label="Beautiful Images">
         <div class="splide__track">
-              <ul class="splide__list">
-                  <li class="splide__slide">
-                      <img src="assets/images/20443.JPEG" alt="text">
-                  </li>
-                  <li class="splide__slide">
-                      <img src="assets/images/20459.JPEG" alt="text">
-                  </li>
-                  <li class="splide__slide">
-                      <img src="assets/images/20697.JPEG" alt="text">
-                  </li>
-              </ul>
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                src="assets/images/3F280B2B-8DAF-448F-82B2-C7A3B769F1D6.JPG"
+                alt="text"
+              />
+            </li>
+            <li class="splide__slide">
+              <img src="assets/images/20943.JPEG" alt="text" />
+            </li>
+            <li class="splide__slide">
+              <img src="assets/images/24240.JPEG" alt="text" />
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -51,25 +54,20 @@
         autem facere amet aliquid repudiandae sunt, perspiciatis eveniet
         reiciendis odit ab fugit a suscipit modi laboriosam cupiditate incidunt
         tenetur deleniti dolor! Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Molestiae, earum mollitia. Lorem ipsum dolor sit, amet
-        consectetur adipisicing elit. Esse delectus reprehenderit debitis sunt
-        ratione perferendis rem animi quos. Saepe fugit voluptates consectetur
-        nulla, odit tenetur esse illum iste corporis incidunt? Aliquam obcaecati
-        animi reiciendis non ducimus. Qui ad amet tempora. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Eos ut soluta corporis commodi veniam
-        odit fugit inventore, delectus porro, aliquam in eveniet sunt magnam
-        quaerat consequuntur dolor quia autem officia! 
+        adipisicing elit.
       </p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Incidunt perferendis omnis animi, labore culpa, officiis amet at assumenda blanditiis voluptatum 
-        fuga sed ea enim rerum architecto facere dignissimos aperiam reiciendis!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Veritatis magnam ab in et repellat, ipsa id blanditiis. 
-        Perferendis, voluptas provident reiciendis quae architecto illo magnam nam voluptate 
-        cumque non? Laborum.</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        perferendis omnis animi, labore culpa, officiis amet at assumenda
+        blanditiis voluptatum fuga sed ea enim rerum architecto facere
+        dignissimos aperiam reiciendis! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Veritatis magnam ab in et repellat, ipsa id
+        blanditiis. Perferendis, voluptas provident reiciendis quae architecto
+        illo magnam nam voluptate cumque non? Laborum.
+      </p>
 
-      <div class="social-links column">
-            
+      <div class="social-links column post-footer-links">
+        <span class="social-links">Share on:</span>
         <a href="https://www.linkedin.com/" target="_blank">
           <span class="icon-linkedin2" aria-hidden="true"></span>
           <span class="screen-reader-text">Follow on LinkedIn</span>
@@ -82,30 +80,29 @@
           <span class="icon-facebook2" aria-hidden="true"></span>
           <span class="screen-reader-text">Follow on Facebook</span>
         </a>
-        
+      </div>
     </main>
     <script src="assets/js/splide.min.js"></script>
-   
-    
+
     <script>
-        document.addEventListener( 'DOMContentLoaded', function() {
-        let splide = new Splide( '.splide', {
-            perPage: 1,
-            pagination: false,
-            mediaQuery: 'min',
-            breakpoints: {
-                768: {
-                    perPage: 1,
-                    gap: 15
-                },
-                1200: {
-                    perPage: 1,
-                    gap: 30
-                }
-            }
-        } );
+      document.addEventListener("DOMContentLoaded", function () {
+        let splide = new Splide(".splide", {
+          perPage: 1,
+          pagination: false,
+          mediaQuery: "min",
+          breakpoints: {
+            768: {
+              perPage: 1,
+              gap: 15,
+            },
+            1200: {
+              perPage: 1,
+              gap: 30,
+            },
+          },
+        });
         splide.mount();
-    } );
+      });
     </script>
   </body>
 </html>

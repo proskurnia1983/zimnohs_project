@@ -348,6 +348,10 @@ h2 a:hover {
   font-size: 14px;
   margin-right: 10px;
 }
+.blog-links {
+  display: flex;
+  justify-content: center;
+}
 .post-info a:hover {
   opacity: 0.7;
 }
@@ -361,6 +365,15 @@ h2 a:hover {
   font-size: 13px;
   color: var(--light-grey);
 }
+.post-footer-links.social-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.post-footer-links.social-links a {
+  font-size: 14px;
+}
+
 /*Slider*/
 .splide__slide img {
   width: 100%;

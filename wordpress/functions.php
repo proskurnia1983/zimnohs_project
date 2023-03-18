@@ -9,7 +9,7 @@ add_action( 'after_setup_theme', 'ruslans_theme_support' );
 function ruslans_theme_scripts() {
 	wp_enqueue_style( 'style-name', get_stylesheet_uri() );
 	wp_enqueue_style('icons-css', get_template_directory_uri() . '/assets/icons/style.min.css');
-    wp_enqueue_style('ruslans_theme-css', get_template_directory_uri() . '/style.css');
+   
 
     
 	/*wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );*/

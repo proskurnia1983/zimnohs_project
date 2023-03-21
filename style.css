@@ -406,6 +406,15 @@ h2 a:hover {
   font-size: 14px;
 }
 
+.post {
+  background-color: green;
+}
+
+.post a img {
+  height: auto;
+  width: 500%;
+}
+
 /*Slider*/
 .splide__slide img {
   width: 100%;

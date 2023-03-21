@@ -2,7 +2,7 @@
 get_header()
 ?>
 <?php 
-var_dump(getPageType());
+
 
 $image = get_field('profile_photo',  get_the_ID());
 
@@ -47,7 +47,7 @@ if (!empty($social)) : ?>
  </a>
 <article class="test-archive">
     <?php 
-    var_dump(get_field('profile_name'));
+
     if(have_posts()){
         while (have_posts()){
             the_post();

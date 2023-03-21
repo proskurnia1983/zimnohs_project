@@ -1,5 +1,6 @@
 <?php get_header()?>
 <main>
+
 <div class="inner-content">
 <?php 
 
@@ -65,7 +66,23 @@ foreach ($social as $sociale) : ?>
  <?php endif; ?>
 
 
- <?php 
+
+
+
+
+<?php
+
+  
+if(have_posts()){
+  while (have_posts()){
+      the_post();
+      the_content();
+      //get_template_part('template-parts/content', 'archive');
+  }
+}
+?>
+
+<?php 
 
 $bottom_text = get_field('bottom_text', get_the_ID());
 
@@ -74,6 +91,7 @@ $bottom_text = get_field('bottom_text', get_the_ID());
 <div>
  <p class="bottom-text"><?php echo $bottom_text; ?></p>
 </div>
+
   </main>
 
 <?php get_footer(); ?>

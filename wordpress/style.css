@@ -216,7 +216,9 @@ li a:active {
   color: var(--primary);
   text-decoration: none;
 }
-
+.current_page_item a {
+  opacity: 0.5;
+}
 .toggle-menu {
   border: none;
   text-decoration: none;
@@ -360,10 +362,26 @@ h2 a:hover {
 ::-webkit-scrollbar {
   width: 0;
 }
+.blog-title {
+  padding-top: 50px;
+  font-size: 36px;
+}
 .posts-list {
-  padding: 80px 15px;
+  padding: 15px 15px;
   width: 100%;
 }
+.posts-list .post {
+  margin-bottom: 30px;
+}
+.posts-list .post a img {
+  width: 100%;
+  height: auto;
+}
+.posts-list .post .meta a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
 .post-info {
   display: flex;
   justify-content: space-between;
@@ -373,8 +391,8 @@ h2 a:hover {
   max-width: 360px;
   color: var(--primary);
   text-decoration: none;
-  font-size: 14px;
-  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .post-info a p {
   margin: 0;
@@ -388,7 +406,7 @@ h2 a:hover {
 }
 @media screen and (min-width: 768px) {
   .post-info a {
-    font-size: 16px;
+    font-size: 30px;
   }
 }
 

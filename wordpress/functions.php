@@ -26,4 +26,5 @@ function ruslans_theme_menu() {
 
 add_action( 'init', 'ruslans_theme_menu' );
 
-?>
+
+

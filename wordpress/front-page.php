@@ -1,19 +1,17 @@
-<?php
-get_header()
-?>
+<?php get_header()?>
+<main>
+<div class="inner-content">
 <?php 
-var_dump(getPageType());
 
-$image = get_field('profile_photo',  get_the_ID());
-
+$image = get_field('profile_photo');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 ?>
-<div class="profile index">
+<div class="profile home">
     <div class="photo-holder radius">
         <?php
-  
+        if( $image ) {
             echo wp_get_attachment_image( $image, $size );
-        
+        } 
         ?> 
     </div>
     <span class="photo-name"><?php echo get_field('profile_name'); ?></span>
@@ -21,7 +19,7 @@ $size = 'full'; // (thumbnail, medium, large, full or custom size)
 </div>
 
 
-<div class="inner-content">
+
 
 <?php 
 $social = get_field('social_link');
@@ -45,15 +43,37 @@ if (!empty($social)) : ?>
 <span class="<?php echo $social['facebook']['class']; ?>" aria-hidden="false"></span>
 <span class="screen-reader-text"><?php  _e('facebook', 'wifi'); ?><?php _e('facebook', 'wifi'); ?></span>
  </a>
-<article class="test-archive">
-    <?php 
-    var_dump(get_field('profile_name'));
-    if(have_posts()){
-        while (have_posts()){
-            the_post();
-            get_template_part('template-parts/content', 'archive');
-        }
-        
-    }
-    ?>
-</article>
+<?php 
+/*
+foreach ($social as $sociale) : ?>
+            <a href="<?php echo $sociale['link']?>" target="_blank">
+              <span class="<?php echo $sociale['icon']; ?>" aria-hidden="false"></span>
+              <span class="screen-reader-text"><?php echo $sociale['title']?></span>
+            </a>
+            <a href="<?php echo $sociale['link']?>" target="_blank">
+              <span class="<?php echo $sociale['icon']; ?>" aria-hidden="false"></span>
+              <span class="screen-reader-text"><?php echo $sociale['title']?></span>
+            </a>
+            <a href="<?php echo $sociale['link']?>" target="_blank">
+              <span class="<?php echo $sociale['icon']; ?>" aria-hidden="false"></span>
+              <span class="screen-reader-text"><?php echo $sociale['title']?></span>
+            </a>
+            
+<?php endforeach; */ ?>
+
+ </div>
+ <?php endif; ?>
+
+
+ <?php 
+
+$bottom_text = get_field('bottom_text', get_the_ID());
+
+?>
+
+<div>
+ <p class="bottom-text"><?php echo $bottom_text; ?></p>
+</div>
+  </main>
+
+<?php get_footer(); ?>

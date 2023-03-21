@@ -305,7 +305,7 @@ hr {
 
 .bottom-text {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   font-size: medium;
 }
 .text-center {
@@ -325,11 +325,6 @@ hr {
   height: auto;
   margin: 0 5px;
 }
-.blog {
-  display: flex;
-  margin-top: 20px;
-  font-size: medium;
-}
 
 .blog-name {
   padding-top: 5px;
@@ -340,7 +335,7 @@ hr {
   padding-bottom: 20px;
 }
 .blog-links a {
-  font-size: smaller;
+  font-size: 13px;
 }
 
 .blog-text {
@@ -367,6 +362,7 @@ h2 a:hover {
 }
 .posts-list {
   padding: 80px 15px;
+  width: 100%;
 }
 .post-info {
   display: flex;
@@ -379,6 +375,9 @@ h2 a:hover {
   text-decoration: none;
   font-size: 14px;
   margin-right: 10px;
+}
+.post-info a p {
+  margin: 0;
 }
 .blog-links {
   display: flex;

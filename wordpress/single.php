@@ -1,7 +1,8 @@
 <?php
 get_header()
 ?>
-
+<main>
+<div class="inner-content">
 <article class="">
     <?php 
     if(have_posts()){
@@ -12,7 +13,6 @@ get_header()
         
     }
     ?>
-
-
-
 </article>
+</div>
+</main>

@@ -1,28 +1,27 @@
-<?php get_header()?>
+<?php get_header() ?>
 
 <main>
 
- 
-  <?php 
+	<?php
 
-  
-  if(have_posts()){
-      while (have_posts()){
-          the_post();
-          the_content();
-          //get_template_part('template-parts/content', 'archive');
-      }
-  }
- 
-   if (is_page( 'Contact' ) ):
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
+			$title = get_the_title();
+			if ($title) {
+				echo '<h1 class="page-title">' . esc_html($title) . '</h1>';
+			}
+			the_content();
+		}
+	}
 
-   echo do_shortcode('[contact-form-7 id="212" title="Contact form"]');
+	if (is_page('Contact')) :
 
-  endif;
-?>
- 
-  
+		echo do_shortcode('[contact-form-7 id="69" title="Contact Form"]');
+
+	endif;
+	?>
+
 </main>
-
 
 <?php get_footer(); ?>

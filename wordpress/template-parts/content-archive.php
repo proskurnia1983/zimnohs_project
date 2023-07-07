@@ -1,4 +1,5 @@
 <div class="post-info">
+    <p>arhive item</p>
     <a href="#">
     <?php the_excerpt(); ?>
     </a>

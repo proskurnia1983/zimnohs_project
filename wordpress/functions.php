@@ -1,32 +1,29 @@
 <?php
-function ruslans_theme_support() {
-	add_theme_support('post-thumbnails');
+function ruslans_theme_support()
+{
+    add_theme_support('post-thumbnails');
 }
-add_action( 'after_setup_theme', 'ruslans_theme_support' );
+add_action('after_setup_theme', 'ruslans_theme_support');
 
-
-
-function ruslans_theme_scripts() {
-	wp_enqueue_style( 'style-name', get_stylesheet_uri() );
-	wp_enqueue_style('icons-css', get_template_directory_uri() . '/assets/icons/style.min.css');
-   
-
-    
-	/*wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );*/
+function ruslans_theme_scripts()
+{
+    wp_enqueue_style('style-name', get_stylesheet_uri());
+    wp_enqueue_style('icons-css', get_template_directory_uri() . '/assets/icons/style.min.css');
+    /*wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );*/
 }
 
-add_action( 'wp_enqueue_scripts', 'ruslans_theme_scripts' );
+add_action('wp_enqueue_scripts', 'ruslans_theme_scripts');
 
-function ruslans_theme_menu() {
-	$locations = array(
-	'primary' => "desktop menu",
-	);
-	register_nav_menus($locations);
+function ruslans_theme_menu()
+{
+    $locations = array(
+        'primary' => "main menu",
+        'footer' => "footer menu",
+    );
+    register_nav_menus($locations);
 }
 
-add_action( 'init', 'ruslans_theme_menu' );
-
-
+add_action('init', 'ruslans_theme_menu');
 
 /*
  * In der functions.php werden über Actions, Filter & Hooks sämtliche WordPress Funktionen de-/aktiviert bzw. angepasst
@@ -57,12 +54,12 @@ add_action('after_setup_theme', function () {
     * die Ausgabe im PHP wird in der Funktion als echo "_e('Zu übersetzender Text','TEXTDOMAIN')" oder return "__('Zu übersetzender Text','TEXTDOMAIN')" eingebunden
     * https://developer.wordpress.org/reference/functions/_e/
     */
-    load_textdomain('wifi', get_template_directory() . '/assets/languages');
+    load_textdomain('zimnohs', get_template_directory() . '/assets/languages');
 
-        // Aktivierung von Beitragsbildern
+    // Aktivierung von Beitragsbildern
     //add_theme_support('post-thumbnails');
 
-   // Eigene Bildgrößen im Theme definieren bzw. registrieren (https://developer.wordpress.org/reference/functions/add_image_size/)
+    // Eigene Bildgrößen im Theme definieren bzw. registrieren (https://developer.wordpress.org/reference/functions/add_image_size/)
     add_image_size('project', 730, 487, array('center', 'center'));  // 730x487 = 3:2
 
 
@@ -77,19 +74,14 @@ add_action('after_setup_theme', function () {
         'comment-form'
     ));
 
-
-
-
-
-
     /*
     * register_nav_menus() registriert Navigations Menüs (ohne diese Funktion gibt es im Admin-Menü: "Design > Menüs" nicht zur Aswahl
     * im array werden die "Positionen im Theme" definiert
     * https://developer.wordpress.org/reference/functions/register_nav_menus/
     */
     register_nav_menus(array(
-        'primary' => __('Haupt Navigation', 'wifi'),
-        'footer' => __('Footer Navigation', 'wifi'),
+        'primary' => __('Haupt Navigation', 'zimnohs'),
+        'footer' => __('Footer Navigation', 'zimnohs'),
     ));
 
 
@@ -156,7 +148,6 @@ add_action('after_setup_theme', function () {
 
 });
 
-
 /*
  * Zusätzlichen Mimes (Dokumenttypen) für den Upload erlauben
  * https://developer.wordpress.org/reference/hooks/upload_mimes/
@@ -173,55 +164,41 @@ add_filter('upload_mimes', function ($mimes = array()) {
 * der "Handle" muss eindeutig sein
 * Liste aller Scripten, die WordPress bereits inkludiert hat: https://developer.wordpress.org/reference/functions/wp_enqueue_script/#default-scripts-and-js-libraries-included-and-registered-by-wordpress
 */
-$theme_version = wp_get_theme()->get( 'Version' );
-$version = is_string( $theme_version ) ? $theme_version : false;
+$theme_version = wp_get_theme()->get('Version');
+$version = is_string($theme_version) ? $theme_version : false;
 
 
 
 if (function_exists('acf_add_options_page')) {
 
-	/* ACF Feldgruppen und Feldeinstellungen als .json-Dateien im Theme speichern (Verzeichnis "acf-fields") und von dort laden
+    /* ACF Feldgruppen und Feldeinstellungen als .json-Dateien im Theme speichern (Verzeichnis "acf-fields") und von dort laden
 	 * ACHTUNG: das Verzeichnis "acf-fields" muss existieren, damit die Dateien dort gespeichert werden können!
 	 * https://www.advancedcustomfields.com/resources/local-json/
 	 */
-	 add_filter('acf/settings/save_json', function ( $path ) {
-		 $path = get_template_directory() . '/acf-fields';
-		 return $path;
-	 });
-	 add_filter('acf/settings/load_json', function ( $paths ) {
-		 unset($paths[0]);
-		 $paths[] = get_stylesheet_directory() . '/acf-fields';
-		 return $paths;
-	 });
- 
- 
-	 /* Deaktivieren des ACF-Admin-Menü */
-	 //add_filter( 'acf/settings/show_admin', '__return_false' );
- 
- 
-	 /* ACF Option Page erstellen
+    add_filter('acf/settings/save_json', function ($path) {
+        $path = get_template_directory() . '/acf-fields';
+        return $path;
+    });
+    add_filter('acf/settings/load_json', function ($paths) {
+        unset($paths[0]);
+        $paths[] = get_stylesheet_directory() . '/acf-fields';
+        return $paths;
+    });
+
+    /* Deaktivieren des ACF-Admin-Menü */
+    //add_filter( 'acf/settings/show_admin', '__return_false' );
+
+    /* ACF Option Page erstellen
 	 * https://www.advancedcustomfields.com/resources/acf_add_options_page/
 	 */
-	 acf_add_options_page(array(
-		 'page_title' => 'Social Links',
-		 'menu_title' => 'Social Links',
-		 'menu_slug' => 'webdev-social-links',
-		 'capability' => 'edit_posts',
-		 'position' => 50,
-		 'icon_url' => 'dashicons-admin-links', // https://developer.wordpress.org/resource/dashicons/
-		 'update_button' => __( 'Änderungen speichern', 'wifi' ),
-		 'updated_message' => __( 'Änderungen wurden gespeichert', 'wifi' )
-	 ) );
-
-
-
-
-	}
-
-
-
-
-
-
-
-
+    // acf_add_options_page(array(
+    //     'page_title' => 'Social Links',
+    //     'menu_title' => 'Social Links',
+    //     'menu_slug' => 'webdev-social-links',
+    //     'capability' => 'edit_posts',
+    //     'position' => 50,
+    //     'icon_url' => 'dashicons-admin-links', // https://developer.wordpress.org/resource/dashicons/
+    //     'update_button' => __('Änderungen speichern', 'wifi'),
+    //     'updated_message' => __('Änderungen wurden gespeichert', 'wifi')
+    // ));
+}

@@ -79,10 +79,10 @@ add_action('after_setup_theme', function () {
     * im array werden die "Positionen im Theme" definiert
     * https://developer.wordpress.org/reference/functions/register_nav_menus/
     */
-    register_nav_menus(array(
-        'primary' => __('Haupt Navigation', 'zimnohs'),
-        'footer' => __('Footer Navigation', 'zimnohs'),
-    ));
+    // register_nav_menus(array(
+    //     'primary' => __('Haupt Navigation', 'zimnohs'),
+    //     'footer' => __('Footer Navigation', 'zimnohs'),
+    // ));
 
 
     /* -- Customizer --
@@ -198,7 +198,7 @@ if (function_exists('acf_add_options_page')) {
     //     'capability' => 'edit_posts',
     //     'position' => 50,
     //     'icon_url' => 'dashicons-admin-links', // https://developer.wordpress.org/resource/dashicons/
-    //     'update_button' => __('Änderungen speichern', 'wifi'),
-    //     'updated_message' => __('Änderungen wurden gespeichert', 'wifi')
-    // ));
+    //     'update_button' => __( 'Änderungen speichern', 'wifi' ),
+    //     'updated_message' => __( 'Änderungen wurden gespeichert', 'wifi' )
+    // ) );
 }

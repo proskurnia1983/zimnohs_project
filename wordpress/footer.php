@@ -28,7 +28,16 @@ if ($logo_url) {
 			$(".menu").toggleClass("open");
 			$("body").toggleClass("menu-opened");
 		});
+
+		$(".menu-item-has-children").append('<button type="button" class="sub-menu-opener"><i class="icon icon-arrow-right"></button>');
+
+		$(".sub-menu-opener").click(function() {
+			$(this).toggleClass("open");
+			$(this).parent().find(".sub-menu").toggleClass("show");
+		});
+
 	});
+
 </script>
 </body>
 

@@ -103,7 +103,7 @@ Author: Anastasiia Proskurnia
     content: "\e949";
 }
 
-.icon-map2:before {
+.icon-map:before {
     content: "\e94c";
 }
 
@@ -111,7 +111,7 @@ Author: Anastasiia Proskurnia
     content: "\e958";
 }
 
-.icon-bubble2:before {
+.icon-bubble:before {
     content: "\e96e";
 }
 
@@ -143,15 +143,15 @@ Author: Anastasiia Proskurnia
     content: "\ea11";
 }
 
-.icon-arrow-up-left2:before {
+.icon-arrow-up-left:before {
     content: "\ea39";
 }
 
-.icon-arrow-up2:before {
+.icon-arrow-up:before {
     content: "\ea3a";
 }
 
-.icon-arrow-up-right2:before {
+.icon-arrow-up-right:before {
     content: "\ea3b";
 }
 
@@ -159,7 +159,7 @@ Author: Anastasiia Proskurnia
     content: "\ea3c";
 }
 
-.icon-arrow-down-right2:before {
+.icon-arrow-down-right:before {
     content: "\ea3d";
 }
 
@@ -197,8 +197,11 @@ html {
 }
 
 body {
-    font-family: "Overpass";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
+    font-family: "Overpass";
 }
 
 body.menu-opened {
@@ -208,14 +211,17 @@ body.menu-opened {
 
 header {
     padding: 10px;
+    min-height: 35px;
 }
 
 main {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .single-post main {
@@ -243,7 +249,7 @@ main {
     margin: 0;
     top: 0;
     left: 0;
-    padding-top: 70px;
+    padding-top: 100px;
     background-color: var(--secondary);
     display: none;
 }
@@ -261,19 +267,6 @@ main {
     letter-spacing: 2px;
 }
 
-.menu li:hover {
-    background-color: var(--primary);
-}
-
-.menu li:hover a {
-    color: var(--secondary);
-}
-
-.menu li a:active {
-    color: var(--primary);
-    text-decoration: none;
-}
-
 .menu-item-has-children {
     position: relative;
 }
@@ -285,13 +278,43 @@ main {
 .sub-menu {
     padding: 0;
     list-style: none;
-    display: block;
+    display: none;
     position: static;
 }
 
+.sub-menu.show {
+    display: block;
+}
+
+.sub-menu-opener {
+    padding: 0;
+    background: none;
+    border: 0;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 64px;
+}
+
+.sub-menu-opener i {
+    display: inline-block;
+}
+
+.sub-menu-opener.open i {
+    transform: rotate(90deg);
+}
+
 @media screen and (min-width: 768px) {
+    .menu li:hover {
+        background-color: var(--primary);
+    }
+    
+    .menu li:hover a {
+        color: var(--secondary);
+    }
     .sub-menu {
-        display: none;
         position: absolute;
         width: 300px;
         left: 0;
@@ -303,6 +326,9 @@ main {
     }
     .menu-item-has-children:hover .sub-menu {
         display: block;
+    }
+    .menu-item-has-children .sub-menu-opener {
+        display: none;
     }
 }
 
@@ -393,6 +419,10 @@ main {
     font-size: 27px;
     margin: 0 5px 0 5px;
     color: #1a1a1a;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
 }
 
 hr {
@@ -576,13 +606,6 @@ h2 a:hover {
     object-fit: cover;
 }
 
-/*Slider*/
-.splide__slide img {
-    width: 100%;
-    height: auto;
-}
-
-/**/
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -621,6 +644,12 @@ h2 a:hover {
     clear: both;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .pagination a {
     color: var(--primary);
     text-decoration: none;
@@ -638,8 +667,11 @@ h2 a:hover {
     margin: 0 5px;
 }
 
+/*Footer*/
+
 .footer {
     padding: 20px 10px;
+    margin-top: auto;
     background-color: var(--light-grey);
 }
 

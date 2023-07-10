@@ -2,9 +2,9 @@
 <?php
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo_url = wp_get_attachment_image_src($custom_logo_id, 'full')[0];
-
+$home_url = get_home_url();
 if ($logo_url) {
-    echo '<div class="footer-logo"><img src="' . esc_url($logo_url) . '" alt="Ruslan Zimnohs Logo"></div>';
+    echo '<div class="footer-logo"><a href="' . esc_url($home_url) . '"><img src="' . esc_url($logo_url) . '" alt="Ruslan Zimnohs Logo"></a></div>';
 }
 ?>
 

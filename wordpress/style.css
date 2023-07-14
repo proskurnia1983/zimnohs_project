@@ -10,713 +10,716 @@ Author: Anastasiia Proskurnia
 @charset "UTF-8";
 
 :root {
-    --primary: #1a1a1a;
-    --secondary: #ffffff;
-    --light-grey: #d9d9d9;
+  --primary: #1a1a1a;
+  --secondary: #ffffff;
+  --light-grey: #d9d9d9;
 }
 
 /* overpass-200 - latin */
 @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Overpass";
-    font-style: normal;
-    font-weight: 200;
-    src: url("assets/fonts/overpass-v12-latin-200.woff2") format("woff2"),
-        /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url("assets/fonts/overpass-v12-latin-200.woff") format("woff");
-    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 200;
+  src: url("assets/fonts/overpass-v12-latin-200.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/overpass-v12-latin-200.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* overpass-regular - latin */
 @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Overpass";
-    font-style: normal;
-    font-weight: 400;
-    src: url("assets/fonts/overpass-v12-latin-regular.woff2") format("woff2"),
-        /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url("assets/fonts/overpass-v12-latin-regular.woff") format("woff");
-    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/overpass-v12-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/overpass-v12-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* overpass-italic - latin */
 @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Overpass";
-    font-style: italic;
-    font-weight: 400;
-    src: url("assets/fonts/overpass-v12-latin-italic.woff2") format("woff2"),
-        /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url("assets/fonts/overpass-v12-latin-italic.woff") format("woff");
-    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: italic;
+  font-weight: 400;
+  src: url("assets/fonts/overpass-v12-latin-italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/overpass-v12-latin-italic.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* overpass-700 - latin */
 @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Overpass";
-    font-style: normal;
-    font-weight: 700;
-    src: url("assets/fonts/overpass-v12-latin-700.woff2") format("woff2"),
-        /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url("assets/fonts/overpass-v12-latin-700.woff") format("woff");
-    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/overpass-v12-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("assets/fonts/overpass-v12-latin-700.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 @font-face {
-    font-family: "icomoon";
-    src: url("assets/fonts/icomoon.eot?8dzegr");
-    src: url("assets/fonts/icomoon.eot?8dzegr#iefix") format("embedded-opentype"),
-        url("assets/fonts/icomoon.ttf?8dzegr") format("truetype"),
-        url("assets/fonts/icomoon.woff?8dzegr") format("woff"),
-        url("assets/fonts/icomoon.svg?8dzegr#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: "icomoon";
+  src: url("assets/fonts/icomoon.eot?8dzegr");
+  src: url("assets/fonts/icomoon.eot?8dzegr#iefix") format("embedded-opentype"),
+    url("assets/fonts/icomoon.ttf?8dzegr") format("truetype"),
+    url("assets/fonts/icomoon.woff?8dzegr") format("woff"),
+    url("assets/fonts/icomoon.svg?8dzegr#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon" !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-home:before {
-    content: "\e900";
+  content: "\e900";
 }
 
 .icon-compass:before {
-    content: "\e949";
+  content: "\e949";
 }
 
 .icon-map:before {
-    content: "\e94c";
+  content: "\e94c";
 }
 
 .icon-mobile:before {
-    content: "\e958";
+  content: "\e958";
 }
 
 .icon-bubble:before {
-    content: "\e96e";
+  content: "\e96e";
 }
 
 .icon-spoon-knife:before {
-    content: "\e9a3";
+  content: "\e9a3";
 }
 
 .icon-list:before {
-    content: "\e9ba";
+  content: "\e9ba";
 }
 
 .icon-star-empty:before {
-    content: "\e9d7";
+  content: "\e9d7";
 }
 
 .icon-happy:before {
-    content: "\e9df";
+  content: "\e9df";
 }
 
 .icon-cross:before {
-    content: "\ea0f";
+  content: "\ea0f";
 }
 
 .icon-checkmark:before {
-    content: "\ea10";
+  content: "\ea10";
 }
 
 .icon-checkmark:before {
-    content: "\ea11";
+  content: "\ea11";
 }
 
 .icon-arrow-up-left:before {
-    content: "\ea39";
+  content: "\ea39";
 }
 
 .icon-arrow-up:before {
-    content: "\ea3a";
+  content: "\ea3a";
 }
 
 .icon-arrow-up-right:before {
-    content: "\ea3b";
+  content: "\ea3b";
 }
 
 .icon-arrow-right:before {
-    content: "\ea3c";
+  content: "\ea3c";
 }
 
 .icon-arrow-down-right:before {
-    content: "\ea3d";
+  content: "\ea3d";
 }
 
 .icon-checkbox-checked:before {
-    content: "\ea52";
+  content: "\ea52";
 }
 
 .icon-facebook:before {
-    content: "\ea91";
+  content: "\ea91";
 }
 
 .icon-instagram:before {
-    content: "\ea92";
+  content: "\ea92";
 }
 
 .icon-twitter:before {
-    content: "\ea96";
+  content: "\ea96";
 }
 
 .icon-linkedin:before {
-    content: "\eaca";
+  content: "\eaca";
 }
 
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 17px;
-    line-height: 1.4;
-    scroll-behavior: smooth;
+  font-size: 17px;
+  line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: "Overpass";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Overpass";
 }
 
 body.menu-opened {
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
-    padding: 10px;
-    min-height: 35px;
+  padding: 10px;
+  min-height: 35px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    max-width: 600px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .single-post main {
-    max-width: 860px;
+  max-width: 860px;
 }
 
 /*MAIN-Menu*/
 .toggle-menu {
-    display: block;
-    margin-left: auto;
+  display: block;
+  margin-left: auto;
 }
 
 .toggle-menu:hover {
-    cursor: pointer;
-    opacity: 0.5;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .menu {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    padding-top: 100px;
-    background-color: var(--secondary);
-    display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding-top: 100px;
+  background-color: var(--secondary);
+  display: none;
+  z-index: 2;
 }
 
 .menu.open {
-    display: block;
+  display: block;
 }
 
 .menu .menu-item a {
-    display: inline-block;
-    width: 100%;
-    padding: 20px 25px;
-    color: var(--primary);
-    text-decoration: none;
-    letter-spacing: 2px;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 25px;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .menu-item-has-children {
-    position: relative;
+  position: relative;
 }
 
 .menu .current-menu-item > a {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .sub-menu {
-    padding: 0;
-    list-style: none;
-    display: none;
-    position: static;
+  padding: 0;
+  list-style: none;
+  display: none;
+  position: static;
 }
 
 .sub-menu.show {
-    display: block;
+  display: block;
 }
 
 .sub-menu-opener {
-    padding: 0;
-    background: none;
-    border: 0;
-    font-size: 18px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 60px;
-    height: 64px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 64px;
 }
 
 .sub-menu-opener i {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sub-menu-opener.open i {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 @media screen and (min-width: 768px) {
-    .menu li:hover {
-        background-color: var(--primary);
-    }
-    
-    .menu li:hover a {
-        color: var(--secondary);
-    }
-    .sub-menu {
-        position: absolute;
-        width: 300px;
-        left: 0;
-        background-color: var(--primary);
-        z-index: 1;
-    }
-    .sub-menu li a {
-        text-align: left;
-    }
-    .menu-item-has-children:hover .sub-menu {
-        display: block;
-    }
-    .menu-item-has-children .sub-menu-opener {
-        display: none;
-    }
+  .menu li:hover {
+    background-color: var(--primary);
+  }
+
+  .menu li:hover a {
+    color: var(--secondary);
+  }
+  .sub-menu {
+    position: absolute;
+    width: 300px;
+    left: 0;
+    background-color: var(--primary);
+    z-index: 1;
+  }
+  .sub-menu li a {
+    text-align: left;
+  }
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+  }
+  .menu-item-has-children .sub-menu-opener {
+    display: none;
+  }
 }
 
 .toggle-menu {
-    border: none;
-    text-decoration: none;
-    background: none;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 1;
+  border: none;
+  text-decoration: none;
+  background: none;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 3;
 }
 
-.toggle-menu.open>span {
-    display: none;
+.toggle-menu.open > span {
+  display: none;
 }
 
 .toggle-menu .icon-cross {
-    display: none;
+  display: none;
 }
 
 .toggle-menu.open .icon-cross {
-    display: block;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
-    .toggle-menu {
-        display: none;
-    }
+  .toggle-menu {
+    display: none;
+  }
 
-    .menu {
-        position: static;
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        padding-top: 0;
-    }
+  .menu {
+    position: static;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding-top: 0;
+  }
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 30px 0;
-    width: 100%;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 30px 0;
+  width: 100%;
+  margin-top: 60px;
 }
 
 @media screen and (min-width: 768px) {
-    .profile {
-        margin: auto 0 30px 0;
-    }
+  .profile {
+    margin: auto 0 30px 0;
+  }
 }
 
 .photo-holder {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin: 0 0 28px 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 0 28px 0;
 }
 
 .photo-holder.radius {
-    border-radius: 100%;
+  border-radius: 100%;
 }
 
 .photo-holder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .photo-name {
-    margin: 0 0 30px 0;
-    font-size: 26px;
+  margin: 0 0 30px 0;
+  font-size: 26px;
 }
 
 .social-links {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .social-links a {
-    text-decoration: none;
-    font-size: 27px;
-    margin: 0 5px 0 5px;
-    color: #1a1a1a;
+  text-decoration: none;
+  font-size: 27px;
+  margin: 0 5px 0 5px;
+  color: #1a1a1a;
 }
 
 .social-links a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 hr {
-    width: 100%;
-    height: 0;
+  width: 100%;
+  height: 0;
 }
 
 .bottom-text {
-    text-align: center;
-    font-size: medium;
+  text-align: center;
+  font-size: medium;
 }
 
 .blog .bottom-text {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .text-center {
-    text-align: center;
-    display: block;
+  text-align: center;
+  display: block;
 }
 
 .inner-content {
-    padding: 0 15px;
-    line-height: 1.5;
+  padding: 0 15px;
+  line-height: 1.5;
 }
 
 .photos {
-    display: flex;
-    margin: 0 -5px;
+  display: flex;
+  margin: 0 -5px;
 }
 
 .photos .photo-holder {
-    width: calc(33.33% - 10px);
-    height: auto;
-    margin: 0 5px;
+  width: calc(33.33% - 10px);
+  height: auto;
+  margin: 0 5px;
 }
 
 .blog-name {
-    padding-top: 5px;
-    font-size: 16px;
+  padding-top: 5px;
+  font-size: 16px;
 }
 
 .blog-links {
-    font-size: 30px;
-    padding-bottom: 20px;
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 .blog-links a {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .blog-text {
-    margin-top: 50px;
-    font-size: smaller;
-    display: flex;
+  margin-top: 50px;
+  font-size: smaller;
+  display: flex;
 }
 
 h2 {
-    font-size: smaller;
-    line-height: normal;
-    text-decoration: none;
+  font-size: smaller;
+  line-height: normal;
+  text-decoration: none;
 }
 
 h2 a {
-    color: var(--primary);
-    text-decoration: none;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 h2 a:hover {
-    color: var(--primary);
-    text-decoration: none;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 .blog-title {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .posts-list {
-    padding: 15px 15px;
-    width: 100%;
+  padding: 15px 15px;
+  width: 100%;
 }
 
 .posts-list .post {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .posts-list .post a img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .posts-list .post .meta a {
-    color: var(--primary);
-    text-decoration: none;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .post-info {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
 }
 
 .post-info a {
-    max-width: 360px;
-    color: var(--primary);
-    text-decoration: none;
+  max-width: 360px;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .post-info a p {
-    margin: 0;
+  margin: 0;
 }
 
 .blog-links {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .post-info a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 @media screen and (min-width: 768px) {
-    .post-info a {
-        font-size: 16px;
-    }
+  .post-info a {
+    font-size: 16px;
+  }
 }
 
-.publish-date, .posts-list .post .meta {
-    font-size: 13px;
-    line-height: 2;
+.publish-date,
+.posts-list .post .meta {
+  font-size: 13px;
+  line-height: 2;
 }
 
 .post-footer-links.social-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
 }
 
 .post-footer-links.social-links a {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .single-post h1 {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .single-post .pre-content {
-    display: flex;
-    max-width: 260px;
-    margin: 0 auto 30px;
-    font-size: 13px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  max-width: 260px;
+  margin: 0 auto 30px;
+  font-size: 13px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .single-post .pre-content span {
-    display: inline-block;
-    margin-right: auto;
+  display: inline-block;
+  margin-right: auto;
 }
 
 .post-author-avatar {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    overflow: hidden;
-    margin-right: 15px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 15px;
 }
 
 .post-author-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .screen-reader-text {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }
 
 .screen-reader-text:focus {
-    background-color: #eee;
-    clip: auto !important;
-    -webkit-clip-path: none;
-    clip-path: none;
-    color: #444;
-    display: block;
-    font-size: 1em;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000;
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
 }
 
 .clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .pagination a {
-    color: var(--primary);
-    text-decoration: none;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .pagination a:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .pagination .current {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .pagination .page-numbers {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 /*Footer*/
 
 .footer {
-    padding: 20px 10px;
-    margin-top: auto;
-    background-color: var(--light-grey);
+  padding: 20px 10px;
+  margin-top: auto;
+  background-color: var(--light-grey);
 }
 
 .footer-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .footer-logo img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 .footer-menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .footer-menu .menu-item a {
-    color: var(--primary);
-    text-decoration: none;
-    padding: 0 5px;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0 5px;
 }
 
-.footer-menu .menu-item a:hover, .footer-menu .menu-item.current-menu-item {
-    opacity: 0.5;
+.footer-menu .menu-item a:hover,
+.footer-menu .menu-item.current-menu-item {
+  opacity: 0.5;
 }
 
 .copyright {
-    font-size: 12px;
-    text-align: center;
-    margin: 0;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
 }
 
 /*WP*/
 
 .wp-block-image img {
-    width: 100%;
+  width: 100%;
 }
 
 .page-title {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
